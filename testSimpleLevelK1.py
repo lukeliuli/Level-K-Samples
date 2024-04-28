@@ -10,7 +10,7 @@ import numpy as np
    称为“ k 级推理”。其中 k 代表一个推理周期的重复次数。一个 k 级为 0 的人会非常天真地参与我们的博弈，他不会考虑别人的选择而只是任意地猜一个数字。一个 k 级为 1 的人会假设别人都在 0 级博弈，进而平均数为 50，因此猜测数为 33。一个 k 级为 2 的人会假设其他人都在 1 级博弈，导致他们最终猜测数为 22。'''
 #https://baijiahao.baidu.com/s?id=1663101694696905100
 
-def runGameOnce(numPlayer,levelRatio,numRounds):
+def runGameOnce_A(numPlayer,levelRatio,numRounds):
     #轮数序号,每个人的出牌，每个人的收益
     playerRecord1= [0]*numRounds
     
@@ -63,7 +63,7 @@ def main():
     levelRatio= args.levelRatio 
     numRounds=args.numRounds
                     
-    playerRecord1 =  runGameOnce(numPlayer,levelRatio,numRounds)
+    playerRecord1 =  runGameOnce_A(numPlayer,levelRatio,numRounds)
     print(playerRecord1)
    
 if __name__=="__main__":
